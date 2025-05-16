@@ -1,0 +1,14 @@
+<template>
+    <div class="card">
+        <lightning-card title="🐾 Animal Adoption Form" icon-name="utility:animal_and_nature">
+            <div class="form">
+                <lightning-record-form
+                    object-api-name="Adoption__c"
+                    layout-type="Full"
+                    mode="Edit"
+                    onsuccess={handleSuccess}>
+                </lightning-record-form>
+            </div>
+        </lightning-card>
+    </div>
+</template>

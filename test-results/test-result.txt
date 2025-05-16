@@ -1,0 +1,30 @@
+
+
+=== Test Results
+TEST NAME                     OUTCOME  MESSAGE  RUNTIME (MS)
+────────────────────────────  ───────  ───────  ────────────
+AnimalAPITest.testGetAnimals  Pass              39          
+
+
+=== Apex Code Coverage by Class
+CLASSES     PERCENT  UNCOVERED LINES
+──────────  ───────  ───────────────
+AnimalAPI   90%      16             
+AnimalMock  100%                    
+
+
+=== Test Summary
+NAME                 VALUE                                   
+───────────────────  ────────────────────────────────────────
+Outcome              Passed                                  
+Tests Ran            1                                       
+Pass Rate            100%                                    
+Fail Rate            0%                                      
+Skip Rate            0%                                      
+Test Run Id          707aj00000KYAHg                         
+Test Setup Time      0 ms                                    
+Test Execution Time  39 ms                                   
+Test Total Time      39 ms                                   
+Org Id               00Daj00000PxeavEAB                      
+Username             priyaparmar628@creative-shark-uz6hvl.com
+Org Wide Coverage    57%                                     
