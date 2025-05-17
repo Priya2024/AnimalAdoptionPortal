@@ -13,8 +13,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Install Node.js (needed for CLI)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
       - name: Install Salesforce CLI
-        uses: salesforcecli/github-action@v1
+        run: npm install --global sfdx-cli
 
       - name: Create auth file
         run: echo "${{ secrets.SFDX_AUTH_URL }}" > auth.txt
@@ -24,5 +29,5 @@ jobs:
         run: sfdx auth:sfdxurl:store --sfdxurlfile auth.txt --setdefaultusername --setalias DevOrg
         shell: bash
 
-      - name: Deploy source to Salesforce
+      - name: Deploy to Salesforce
         run: sfdx force:source:deploy -p force-app -u DevOrg --wait 10 --verbose
