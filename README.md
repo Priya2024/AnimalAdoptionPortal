@@ -157,17 +157,14 @@ AnimalAdoptionPortal/
 
 💻 How to Use or Reuse This Project
 
-Fork or clone this repository.
+FAuthorize and connect to your Salesforce Developer Org using Salesforce CLI.
 
-Connect to your Salesforce Dev Org.
+Deploy the source code with:
 
-Run sfdx force:source:deploy -p force-app/main/default
+```bash
+sfdx force:source:deploy -p force-app/main/default
 
-Open the app in Salesforce → Add LWC & Aura components to a Lightning Page.
 
-Trigger the flow with new record.
-
-Monitor CI/CD in GitHub Actions tab.
 
 📢 Author
 
