@@ -135,13 +135,14 @@ AnimalAdoptionPortal/
 
 │           ├── lwc/
 
-│           │   └── adoptionForm/
+
+│           │      └── adoptionForm/
 
 │           ├── aura/
 
-│           │   └── animalStatusTracker/
+│           │    └── animalStatusTracker/
 
-│           ├── classes/
+│           ├── classes/ 
 
 │           │   └── AnimalStatusController.cls
 
@@ -169,9 +170,13 @@ Trigger the flow with new record.
 Monitor CI/CD in GitHub Actions tab.
 
 📢 Author
+
 👩‍💻 Priya Parmar
+
 📬 Email: PriyaParmar628@gmail.com
+
 🌐 GitHub: github.com/Priya2024
+
 🔗 LinkedIn:www.linkedin.com/in/priya-parmar-4204a618a
 
 
