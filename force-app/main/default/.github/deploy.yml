@@ -10,18 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Install Salesforce CLI
-        uses: salesforcecli/sfdx-action@v1
+        uses: salesforcecli/github-action@v1
 
-      - name: Create auth file from secret
+      - name: Create auth file
         run: echo "${{ secrets.SFDX_AUTH_URL }}" > auth.txt
+        shell: bash
 
-      - name: Authenticate to Salesforce Org
+      - name: Authenticate to Salesforce org
         run: sfdx auth:sfdxurl:store --sfdxurlfile auth.txt --setdefaultusername --setalias DevOrg
+        shell: bash
 
-      - name: Deploy to Salesforce
+      - name: Deploy source to Salesforce
         run: sfdx force:source:deploy -p force-app -u DevOrg --wait 10 --verbose
 
