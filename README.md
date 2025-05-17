@@ -90,42 +90,72 @@ Log visible under GitHub → Actions tab
 🧪 Project Development Flow
 
 1️⃣ Create new Salesforce DX project
+
 2️⃣ Build LWC Component: adoptionForm
+
 3️⃣ Create Apex Class: AnimalStatusController
+
 4️⃣ Build Aura Component: animalStatusTracker
+
 5️⃣ Set up custom objects & fields in Org
+
 6️⃣ Design and configure approval Flows
+
 7️⃣ Test components in Salesforce Org
+
 8️⃣ Push project to GitHub
+
 9️⃣ Configure GitHub Actions for CI/CD
+
 🔟 Take screenshots & deploy final version
 
 🖼️ Screenshots
 
 Screenshot	Description
+
 01_LWC_AdoptionForm.png	LWC component UI for adoption input
+
 02_Aura_StatusTracker.png	Aura component showing live status
+
 03_Flow_Automation.png	Salesforce flow automating the process
+
 04_GitHub_CICD.png	GitHub Action showing successful deployment
+
 05_CLI_Deploy.png	Salesforce CLI terminal deploy success.
 
 📦 Project Directory Structure
+
 AnimalAdoptionPortal/
+
 ├── force-app/
+
 │   └── main/
+
 │       └── default/
+
 │           ├── lwc/
+
 │           │   └── adoptionForm/
+
 │           ├── aura/
+
 │           │   └── animalStatusTracker/
+
 │           ├── classes/
+
 │           │   └── AnimalStatusController.cls
+
 ├── .github/
+
 │   └── workflows/
+
 │       └── deploy.yml
+
 ├── README.md
 
+
 💻 How to Use or Reuse This Project
+
 Fork or clone this repository.
 
 Connect to your Salesforce Dev Org.
