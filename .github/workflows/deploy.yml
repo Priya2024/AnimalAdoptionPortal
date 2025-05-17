@@ -10,11 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Install Salesforce CLI
         run: npm install sfdx-cli --global
+
+      - name: Check for SFDX_AUTH_URL
+        run: |
+          if [ -z "${{ secrets.SFDX_AUTH_URL }}" ]; then
+            echo "❌ SFDX_AUTH_URL secret is not set. Please configure it in repository settings.";
+            exit 1;
+          fi
 
       - name: Authenticate to org
         run: |
@@ -23,5 +30,3 @@ jobs:
 
       - name: Deploy to Salesforce
         run: sfdx force:source:deploy -p force-app -u DevOrg
-        # trigger
-
